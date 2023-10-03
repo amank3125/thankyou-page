@@ -1,0 +1,14 @@
+.container {
+    width: calc(100%-2vw);
+    height: calc(100%-2vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1,p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+iframe{
+    width: 100%;
+}
