@@ -131,6 +131,11 @@ background-color: #ffffff;
     margin-top: -8%;
     border-radius: 50%;
     padding: 2vh;
+    transition: 0.3s ease-in-out all;
+}
+.img-top:hover {
+  transform: rotateX(360deg);
+  box-shadow: 10px 15px 20px rgb(0, 0, 0,0.2);
 }
 /* @media screen and (max-width: 480px) {
     .container{
