@@ -1,4 +1,9 @@
+* {
+    cursor: none;
+}
 body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +20,7 @@ body {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8DE9D5", endColorstr="#32C4C0", GradientType=1 );
 }
 .container {
-    background: white;
+    /* background: white; */
     padding: 0px 50px 80px 50px;
     border-radius: 15px;
     width: calc(60%-2vw);
@@ -24,17 +29,92 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.3s all ease-in-out;
-}
-.container:hover{
-    box-shadow: 10px 20px 60px rgb(0, 0, 0,0.1);
-    transform: translateY(-15px);
-}
-h1,p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 300;
+    transition: 0.5s all ease-in;
 }
 iframe{
     width: 100%;
 }
 
+.flip-box {
+  background-color: transparent;
+  width: 40vw;
+  height: 50vh;
+  perspective: 1000px;
+  border-radius: 15px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 15px;
+}
+
+.flip-box-back {
+background-color: #ffffff;
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+}
+/* ---------------Cursor--------------- */
+.circle {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://seeklogo.com/images/P/physics-wallah-logo-7C6D7E25BB-seeklogo.com.png');
+    background-position: center;
+    background-size: contain;
+    /* background: linear-gradient(to top left, #0062bE, #00A2FE); */
+    border-radius: 50%;
+    position: absolute;
+    top: 56%;
+    left: 48%;
+    margin: -10px 0 0 -10px;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    z-index: 10;
+    visibility: hidden;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(120deg, black,rgb(61, 61, 61));
+    height: 40px;
+    width: 92%;
+    list-style: none;
+    margin-top: 20px;
+    padding: 10px;
+    list-style: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    color: white;
+  }
+  li:hover{
+    transform: translateX(15px);
+    box-shadow: 10px 15px 20px rgb(0, 0, 0,0.2);
+    /* background-image: linear-gradient(360deg, black,rgb(61, 61, 61)); */
+
+  }
+  .steps {
+    margin-top: 50px;
+  }
