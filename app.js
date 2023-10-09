@@ -8,6 +8,7 @@ var kinet = new Kinet({
   // select circle element
   var circle = document.getElementById('circle');
   var body = document.getElementsByTagName('body');
+  var pwImg = document.querySelector('.img-top');
   
   // set handler on kinet tick event
   kinet.on('tick', function(instances) {
