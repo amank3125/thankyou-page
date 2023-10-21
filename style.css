@@ -29,14 +29,20 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.5s all ease-in;
-}
 
+}
+.header-container {
+  /* border: 1px solid black; */
+  width: 60%;
+  padding-inline: 20%;
+}
 .flip-box {
   background-color: transparent;
   width: 40vw;
   height: 60vh;
   perspective: 1000px;
   border-radius: 15px;
+  
 }
 
 .flip-box-inner {
@@ -64,6 +70,7 @@ body {
   background-color: #ffffff;
   color: black;
   border-radius: 15px;
+  /* padding-inline: 5%; */
 }
 
 .flip-box-back {
@@ -126,7 +133,7 @@ background-color: #ffffff;
     left: -1%;
   }
 .img-top {
-    height: 10vh;
+    height: 8vh;
     background-color: white;
     margin-top: -8%;
     border-radius: 50%;
@@ -134,9 +141,10 @@ background-color: #ffffff;
     transition: 0.3s ease-in-out all;
 }
 .img-top:hover {
-  transform: rotateX(360deg);
+  transform: scale(1.1);
   box-shadow: 10px 15px 20px rgb(0, 0, 0,0.2);
 }
+
 /* @media screen and (max-width: 480px) {
     .container{
         width: 60vw;
@@ -144,3 +152,22 @@ background-color: #ffffff;
         border: 1px solid white;
     }
   } */
+.flip-box-front,.flip-box-back {
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
+
+.uidcontainer {
+  display: grid;
+  place-items: center;
+  border-radius: 15px 0px 0px 0px;
+  transform: rotate(-45deg) translate(-30%, -50%); 
+  height: 60px;
+  width: 250px;
+  box-shadow: 10px 10px 20px 20px rgba(40, 40, 40, 0.1);
+  background-image: linear-gradient(0deg,black,rgb(114, 114, 114));
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 24px;
+}
