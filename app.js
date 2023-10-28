@@ -24,14 +24,32 @@ var kinet = new Kinet({
   });
 
 console.clear();
-const url = window.location;
-let _header = document.querySelector('.header');
-let _uid1 = document.querySelector('.uid1');
-let _uid2 = document.querySelector('.uid2');
-let prstring = url.search.split("?")[1];
-let prArr = prstring.split("&")
-let empName = prArr[0].replace("empName=","").replace(/%20/g," ");
-let uid = prArr[1].replace("uid=","");
-_header.innerHTML = `Thank You ${empName}!`
-_uid1.innerHTML = `#${uid}`
-_uid2.innerHTML = `#${uid}`
+// const url = window.location;
+// let _header = document.querySelector('.header');
+// let _uid1 = document.querySelector('.uid1');
+// let _uid2 = document.querySelector('.uid2');
+// let prstring = url.search.split("?")[1];
+// let prArr = prstring.split("&")
+// let empName = prArr[0].replace("empName=","").replace(/%20/g," ");
+// let uid = prArr[1].replace("uid=","");
+// _header.innerHTML = `Thank You ${empName}!`
+// _uid1.innerHTML = `#${uid}`
+// _uid2.innerHTML = `#${uid}`
+
+
+// Display Viewport width and height 
+// window.addEventListener('load',()=>{
+//   const width = window.innerWidth;
+//   const height = window.innerHeight;
+//   w.innerHTML = width;
+//   h.innerHTML = height;
+// })
+
+// let w = document.querySelector('.w');
+// let h = document.querySelector('.h');
+// window.addEventListener('resize',()=>{
+//   const width = window.innerWidth;
+//   const height = window.innerHeight;
+//   w.innerHTML = width;
+//   h.innerHTML = height;
+// })
