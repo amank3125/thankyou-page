@@ -191,6 +191,7 @@ iframe {
           max-height: 60vh;
           padding: 0;
         }
+      
         .flip-box {
           width: 100%;
           height: 100%;
@@ -207,8 +208,8 @@ iframe {
         ul.steps{
           padding-left: 10px;
         }
-        .header {
-          font-size: 1em;
+        span.header {
+          font-size: 1.5rem !important;
         }
         iframe {
           height:25vh;
@@ -216,5 +217,13 @@ iframe {
         .greetings-foot-text {
           margin-top: -10%;
           padding: 2%;
+        }
+        .header-container {
+          padding: 5%;
+          width:75vw;
+          margin-left: -5%;
+        }
+        .img-top {
+          height:7.5vh ;
         }
 }
