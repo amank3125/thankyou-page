@@ -28,13 +28,28 @@ const url = window.location;
 let _header = document.querySelector('.header');
 let _uid1 = document.querySelector('.uid1');
 let _uid2 = document.querySelector('.uid2');
+let _li2 = document.querySelector('.li2');
+let _li3 = document.querySelector('.li3');
 let prstring = url.search.split("?")[1];
-let prArr = prstring.split("&")
-let empName = prArr[0].replace("empName=","").replace(/%20/g," ");
-let uid = prArr[1].replace("uid=","");
-_header.innerHTML = `Thank You ${empName}!`
-_uid1.innerHTML = `#${uid}`
-_uid2.innerHTML = `#${uid}`
+let prArr = prstring.split("&");
+  if(!prstring.includes("src=hr")){
+    console.log(prstring);
+    _li2.innerHTML = 'Check your inbox for the Email.';
+    _li3.innerHTML = 'Follow the steps in the email & start using the Admin Portal.';}
+    else{
+      _li2.innerHTML = 'Check your inbox for the Credentials Email.';
+      _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
+    }
+    if (prArr.length === 1){
+      var empName = prArr[0].replace("empName=","").replace(/%20/g," ");
+      _header.innerHTML = `Thank You ${empName}!`
+    } else if (prArr.length === 2){
+      var uid = prArr[1].replace("uid=","");
+      var empName = prArr[0].replace("empName=","").replace(/%20/g," ");
+      _header.innerHTML = `Thank You ${empName}!`
+      _uid1.innerHTML = `#${uid}`
+      _uid2.innerHTML = `#${uid}`
+};
 
 
 // Display Viewport width and height 
