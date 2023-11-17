@@ -39,11 +39,11 @@ let prArr = prstring.split("&");
     else{
       _li2.innerHTML = 'Check your inbox for the Credentials Email.';
       _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
-    }
+    };
     if (prArr.length === 1){
       var empName = prArr[0].replace("empName=","").replace(/%20/g," ");
       _header.innerHTML = `Thank You ${empName}!`
-    } else if (prArr.length === 2){
+    } else if (prArr.length === 2 || prArr.length === 3){
       var uid = prArr[1].replace("uid=","");
       var empName = prArr[0].replace("empName=","").replace(/%20/g," ");
       _header.innerHTML = `Thank You ${empName}!`
