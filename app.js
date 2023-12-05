@@ -32,17 +32,18 @@ let _li2 = document.querySelector('.li2');
 let _li3 = document.querySelector('.li3');
 let prstring = url.search.split("?")[1];
 let prArr = prstring.split("&");
-let _trackUID = 'https://pw.jotform.com/inbox/232893220066050/5775757258898991783?search=';
-let _mailSrch = "";
-  if(!prstring.includes("src=hr")){  // If Source is HR
-    _li2.innerHTML = 'Check your inbox for the Email.';
+let _trackUID = "";
+let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw.live+subject%3A";
+  if(!prstring.includes("src=GIDC")){  // If Source is HR
+    _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}AIC" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;  // Hyperlinked to email inbox  
+    // _li2.innerHTML = 'Check your inbox for the Email.';  @Non Hyper
     _li3.innerHTML = 'Follow the steps in the email & start using the Admin Portal.';
-    _mailSrch = '<a href="https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw.live+subject%3AGIDC" target="_blank">';
+    _trackUID = 'https://pw.jotform.com/inbox/232563009192958/?search=';
   }
-    else{                           // If Source is not HR or not given
-      _li2.innerHTML = 'Check your inbox for the Credentials Email.';
+    else {                           // If Source is not HR or not given
+      _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}GIDC" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
       _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
-      _mailSrch = '<a href="https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw.live+subject%3" target="_blank">';
+      _trackUID = 'https://pw.jotform.com/inbox/232893220066050/?search=';
     };
     if (prArr.length === 1){
       var empName = prArr[0].replace("empName=","").replace(/%20/g," ");
