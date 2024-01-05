@@ -147,8 +147,8 @@ background-color: #ffffff;
     transition: 0.3s ease-in-out all;
 }
 .img-top:hover {
-  transform: scale(1.1);
-  box-shadow: 10px 15px 20px rgb(0, 0, 0,0.2);
+  /* transform: scale(1.1); */
+  /* box-shadow: 10px 15px 20px rgb(0, 0, 0,0.2); */
 }
 
 /* @media screen and (max-width: 480px) {
