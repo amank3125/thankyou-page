@@ -52,6 +52,11 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
     pwImg.forEach(function(img){
       img.src = './img/xylem_logo.png';
       img.style = 'width : 30%; height:8%; border-radius:0px; margin-top:0;';
+      if(screen.width<=480){
+        img.style = 'width:30vw;height:4vh; border-radius:0px; margin-top:0;';
+      }else {
+        return;
+      };
     });
     _lis.forEach(function(li){
       li.style = "background-image:linear-gradient(120deg,#0e415d,#051d29);";
