@@ -105,7 +105,7 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
 
 // Display Viewport width and height 
 window.addEventListener('load',()=>{
-  console.log('v2.37');
+  console.log('v2.38');
 })
 
 // let w = document.querySelector('.w');
