@@ -95,7 +95,7 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
       _uid1.innerHTML = `${uid}<a href="${_trackUID}${uid}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
       _uid2.innerHTML = `${uid}<a href="${_trackUID}${uid}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
 };
-
+console.log('v2.36')
 
 // Display Viewport width and height 
 // window.addEventListener('load',()=>{
