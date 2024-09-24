@@ -78,9 +78,10 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
     _trackUID = 'https://pw.jotform.com/inbox/242383049963060/?search=';
     //------------------
   } else if(prstring.includes("src=vpfm")){  // If Source is HR
-    console.log('src = BAFS');                     // If Source is not HR or not given
-    _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}VPFM" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
-    _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
+    console.log('src = VPFM');                     // If Source is not HR or not given
+    _li2.innerHTML = `Check your Inbox for further updates <a href="${_mailSrch}VPFM" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
+    _li3.style = 'display:none;';
+    _li3.innerHTML = '';
     _trackUID = 'https://pw.jotform.com/inbox/240983479119064/?search=';
     //------------------
   }
