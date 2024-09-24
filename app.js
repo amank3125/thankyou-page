@@ -77,6 +77,12 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
     _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
     _trackUID = 'https://pw.jotform.com/inbox/242383049963060/?search=';
     //------------------
+  } else if(prstring.includes("src=vpfm")){  // If Source is HR
+    console.log('src = BAFS');                     // If Source is not HR or not given
+    _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}VPFM" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
+    _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
+    _trackUID = 'https://pw.jotform.com/inbox/240983479119064/?search=';
+    //------------------
   }
     else {   
       console.log('src = AIDC');     
@@ -95,15 +101,11 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
       _uid1.innerHTML = `${uid}<a href="${_trackUID}${uid}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
       _uid2.innerHTML = `${uid}<a href="${_trackUID}${uid}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
 };
-console.log('v2.36')
 
 // Display Viewport width and height 
-// window.addEventListener('load',()=>{
-//   const width = window.innerWidth;
-//   const height = window.innerHeight;
-//   w.innerHTML = width;
-//   h.innerHTML = height;
-// })
+window.addEventListener('load',()=>{
+  console.log('v2.36');
+})
 
 // let w = document.querySelector('.w');
 // let h = document.querySelector('.h');
