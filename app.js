@@ -64,9 +64,21 @@ let _mailSrch = "https://mail.google.com/mail/u/0/#search/from%3Adont-reply%40pw
     _uidContainers.forEach(function(uidC){
       uidC.style = "background-image:linear-gradient(220deg,#0e415d,#051d29);";
     })
+  } else if(prstring.includes("src=bafm")){  // If Source is HR
+    console.log('src = 1');                     // If Source is not HR or not given
+    _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}BAFM" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
+    _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
+    _trackUID = 'https://pw.jotform.com/inbox/232761332463049/?search=';
+    //------------------
+  } else if(prstring.includes("src=bafs")){  // If Source is HR
+    console.log('src = 1');                     // If Source is not HR or not given
+    _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}BAFS" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;
+    _li3.innerHTML = 'Change your login Credentials and setup 2FA (Important).';
+    _trackUID = 'https://pw.jotform.com/inbox/242383049963060/?search=';
+    //------------------
   }
     else {        
-      _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}AIC" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;  // Hyperlinked to email inbox  
+      _li2.innerHTML = `Check your Inbox for an email with credentials <a href="${_mailSrch}AIDC" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a>`;  // Hyperlinked to email inbox  
       // _li2.innerHTML = 'Check your inbox for the Email.';  @Non Hyper
       _li3.innerHTML = 'Follow the steps in the email & start using the Admin Portal.';
       _trackUID = 'https://pw.jotform.com/inbox/232563009192958/?search=';
