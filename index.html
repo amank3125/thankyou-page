@@ -39,10 +39,23 @@
             <h2>What to do Next?</h2>
             <div class="steps-container">
             <ul class="steps">
-                <li class="li li1">Wait for the Approval.</li>
-                <li class="li li2">Check your inbox for the Email. <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a></li>
-                <li class="li li3">Follow the steps in the email to get started.</li>
-                <li class="li li4">Enjoy 🎉</li>
+                <li class="li li1">Wait for the Approval. <i class="fa-solid fa-angle-down"></i><div class="content" style="display:none;">
+                  <!-- Expandable content for step 1 -->
+                  Your request is pending approval by the administrator. Please wait until you receive a notification.
+                </div>
+              </li>
+                <li class="li li2">Check your inbox for the Email. <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ffffff;"></i></a><div class="content" style="display:none;">
+                  <!-- Expandable content for step 2 -->
+                  You will receive an email containing further instructions once the approval is complete.
+                </div></li>
+                <li class="li li3">Follow the steps in the email to get started. <i class="fa-solid fa-shoe-prints"></i><div class="content" style="display:none;">
+                  <!-- Expandable content for step 3 -->
+                  Follow the instructions in the email to set up your account and get started.
+                </div></li>
+                <li class="li li4">Enjoy <i class="fa-solid fa-hands-clapping"></i><div class="content" style="display:none;">
+                  <!-- Expandable content for step 4 -->
+                  You're all set! Enjoy using the platform.
+                </div></li>
             </ul>
           </div>
           </div>
@@ -50,7 +63,6 @@
       <div id="circle" class="circle"></div>
       <script src="https://kit.fontawesome.com/6f5fc009a5.js" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/kinet@2.2.1/dist/kinet.min.js"></script>
-      <script src="app.js">
-      </script>
+      <script src="app.js"></script>
 </body>
 </html>
